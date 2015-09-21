@@ -59,10 +59,10 @@ def clip_left(read):
                                         R+=(5-M)
 					M+=(5-M)
 				continue
-		if M==5 & piece[0]==2:
+		if (M==5) & (piece[0]==2):
 			M+=piece[1]
 			continue
-		if M>=5 & piece[0]!=2:	
+		if (M>=5) & (piece[0]!=2):	
 			newCigar.append(piece)
 		#process read sequence :
 		#remove R bases from the left
