@@ -139,7 +139,11 @@ def clip_right(read):
                                         M+=(5-M)
                                 continue
                 if M>=5:
-                        newCigar.insert(0,piece)
+			if (len(newCigar)==0) & (piece[0]==2):
+                                M+=piece[1]
+                                continue
+                        else:
+                        	newCigar.insert(0,piece)
                 #process read sequence :
                 #remove R bases from the left
         temporaryqual=read.qual[:-R]
